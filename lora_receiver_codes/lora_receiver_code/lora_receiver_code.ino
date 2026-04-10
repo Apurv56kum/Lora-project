@@ -12,7 +12,7 @@ void setup() {
 
   LoRa.setPins(SS, RST, DIO0);
 
-  if (!LoRa.begin(915E6)) {   // Match sender frequency
+  if (!LoRa.begin(915E6)) {   
     Serial.println("LoRa init failed!");
     while (1);
   }
