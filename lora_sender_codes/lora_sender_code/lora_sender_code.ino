@@ -12,7 +12,7 @@ void setup() {
 
   LoRa.setPins(SS, RST, DIO0);
 
-  if (!LoRa.begin(915E6)) {   // Frequency (change as per region: 865E6 India)
+  if (!LoRa.begin(915E6)) {   
     Serial.println("LoRa init failed!");
     while (1);
   }
@@ -24,7 +24,7 @@ void loop() {
   Serial.println("Sending packet...");
 
   LoRa.beginPacket();
-  LoRa.print("Hello from Apurv 🚀");
+  LoRa.print("Hello from Apurv");
   LoRa.endPacket();
 
   delay(2000);
